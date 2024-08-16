@@ -536,7 +536,7 @@ input[type='file']::before {
     font-size: 14px;
   }
   .download-button{
-    display: none;
+    /* display: none; */
   }
   footer {
     margin: 14px;
