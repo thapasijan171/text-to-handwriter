@@ -535,6 +535,9 @@ input[type='file']::before {
   .mobile {
     font-size: 14px;
   }
+  .download-button{
+    display: none;
+  }
   footer {
     margin: 14px;
   }
