@@ -359,7 +359,22 @@ body.dark .github-corner {
   padding: 58px 0px;
   text-align: center;
 }
-
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #1a73e8;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.download-button:hover {
+  background-color: #1558d6;
+}
 @media (max-width: 768px) {
   body {
     padding: 100px 10px;
