@@ -169,7 +169,7 @@ const onTouchMove = (e) => {
   drawPoint(touchX, touchY);
 };
 
-/* Event listeners */
+/* Event */
 document.querySelector('#clear-draw-canvas').addEventListener('click', clear);
 document
   .querySelector('#add-to-paper-button')
