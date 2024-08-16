@@ -13,7 +13,7 @@ const drawCanvas = document.querySelector('canvas#diagram-canvas');
 const ctx = drawCanvas.getContext('2d');
 ctx.fillStyle = 'transparent';
 ctx.fillRect(0, 0, drawCanvas.width, drawCanvas.height);
-// Set smaller canvas on mobiles
+// Set smaller canvas for mobiles
 if (isMobile) {
   drawCanvas.height = 150;
   drawCanvas.width = 300;
