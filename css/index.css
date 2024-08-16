@@ -3,6 +3,7 @@
 /* CSS Variables */
 html,
 body {
+  scroll-behavior: smooth;
   margin: 0px;
 }
 
