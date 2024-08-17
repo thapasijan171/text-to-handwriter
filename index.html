@@ -60,289 +60,356 @@
 </head>
 
 <body>
-<div class="sijan">
-  <main>
-    <h1 style="text-align: center;">Text to Your Handwriting</h1>
-    <section class="generate-image-section">
-      <br /><br />
-      <form id="generate-image-form">
-        <!-- Generate Image Section -->
-        <div class="display-flex output-grid responsive-flex">
-          <div class="flex-1 page-container-super">
-            <div>
-              <h2 style="margin-top: 0px;">Here 🙌</h2>
-              <label class="block" for="note" style="color: #fff;">Write text your homework & Text</label>
+  <div class="sijan">
+    <main>
+      <h1 style="text-align: center;">Text to Your Handwriting</h1>
+      <section class="generate-image-section">
+        <br /><br />
+        <form id="generate-image-form">
+          <!-- Generate Image Section -->
+          <div class="display-flex output-grid responsive-flex">
+            <div class="flex-1 page-container-super">
+              <div>
+                <h2 style="margin-top: 0px;">Here 🙌</h2>
+                <label class="block" for="note" style="color: #fff;">Write text your homework & Text</label>
+              </div>
+
+              <div class="flex-1 page-container">
+                <div class="page-a margined lines">
+                  <div contenteditable="true" class="top-margin"></div>
+                  <div class="display-flex left-margin-and-content">
+                    <div contenteditable="true" class="left-margin"></div>
+                    <div class="paper-content" id="note" contenteditable="true">
+                      Hello! My name is Sijan Thapa, and I'm a recent 12th-grade graduate
+                      currently studying full-stack development. I’m excited to introduce
+                      my first project, Text To Your Handwriting. This tool was created to
+                      simplify the assignment process for students, as I understand how
+                      overwhelming it can be to manage hundreds of pages of assignments.
+                      Often, teachers can’t check every assignment thoroughly, so I developed
+                      this free tool to make assignments more engaging and manageable. With a
+                      user-friendly interface and customization options, this tool allows
+                      students to personalize their text to match different handwriting styles.
+                      I hope this project helps ease the burden of assignments and offers a
+                      valuable resource for students.
+                    </div>
+                  </div>
+                  <div class="overlay"></div>
+                </div>
+                <br />
+              </div>
+
+              <div style="display: none;">
+                <button id="draw-diagram-button" type="button" style="font-size: 0.9rem; margin-top: 5px;"
+                  class="draw-button">
+                  Draw <small>(Beta)</small>
+                </button>
+              </div>
             </div>
 
-            <div class="flex-1 page-container">
-              <div class="page-a margined lines">
-                <div contenteditable="true" class="top-margin"></div>
-                <div class="display-flex left-margin-and-content">
-                  <div contenteditable="true" class="left-margin"></div>
-                  <div class="paper-content" id="note" contenteditable="true">
-                    Hello! My name is Sijan Thapa, and I'm a recent 12th-grade graduate 
-                    currently studying full-stack development. I’m excited to introduce
-                    my first project, Text To Your Handwriting. This tool was created to
-                    simplify the assignment process for students, as I understand how 
-                    overwhelming it can be to manage hundreds of pages of assignments.
-                    Often, teachers can’t check every assignment thoroughly, so I developed
-                    this free tool to make assignments more engaging and manageable. With a 
-                    user-friendly interface and customization options, this tool allows 
-                    students to personalize their text to match different handwriting styles. 
-                    I hope this project helps ease the burden of assignments and offers a 
-                    valuable resource for students.
+            <div class="customization-col">
+              <!-- Handwriting Font -->
+              <div style="padding: 5px 0px 5px 0px;">
+                <b>Customize Yourself</b>
+              </div>
+
+              <!-- Letter spacing, Paper Margin, Paper Lines, Paper Curvature -->
+              <fieldset>
+                <legend>Margin & Line Options</legend>
+
+                <div class="category-grid">
+                  <div>
+                    <label for="paper-margin-toggle">Paper Margin:
+                      <span aria-label="paper margin status" class="status">on</span>
+                    </label>
+                    <label class="switch-toggle outer">
+                      <input aria-checked="true" checked aria-label="Paper Margin Button" id="paper-margin-toggle"
+                        type="checkbox" />
+                      <div></div>
+                    </label>
+                  </div>
+
+                  <div>
+                    <label for="paper-line-toggle">Paper Lines:
+                      <span aria-label="paper line status" class="status">on</span>
+                    </label>
+                    <label class="switch-toggle outer">
+                      <input aria-checked="true" checked aria-label="Paper Line Button" id="paper-line-toggle"
+                        type="checkbox" />
+                      <div></div>
+                    </label>
+                  </div>
+                  <div class="experimental">
+                    <!-- Removed option -->
+                    <div class="upload-paper-container">
+                      <label class="block" for="paper-file">Upload Paper Image as Background</label>
+                      <input accept=".jpg, .jpeg, .png" type="file" id="paper-file" />
+                    </div>
                   </div>
                 </div>
-                <div class="overlay"></div>
-              </div>
-              <br />
-            </div>
+              </fieldset>
 
-            <div style="display: none;">
-              <button id="draw-diagram-button" type="button" style="font-size: 0.9rem; margin-top: 5px;"
-                class="draw-button">
-                Draw <small>(Beta)</small>
-              </button>
-            </div>
-          </div>
+              <!--   -->
+              <fieldset>
+                <legend>Spacing Options</legend>
 
-          <div class="customization-col">
-            <!-- Handwriting Font -->
-            <div style="padding: 5px 0px 5px 0px;">
-              <b>Customize Yourself</b>
-            </div>
-
-            <!-- Letter spacing, Paper Margin, Paper Lines, Paper Curvature -->
-            <fieldset>
-              <legend>Margin & Line Options</legend>
-
-              <div class="category-grid">
-                <div>
-                  <label for="paper-margin-toggle">Paper Margin:
-                    <span aria-label="paper margin status" class="status">on</span>
-                  </label>
-                  <label class="switch-toggle outer">
-                    <input aria-checked="true" checked aria-label="Paper Margin Button" id="paper-margin-toggle"
-                      type="checkbox" />
-                    <div></div>
-                  </label>
-                </div>
-
-                <div>
-                  <label for="paper-line-toggle">Paper Lines:
-                    <span aria-label="paper line status" class="status">on</span>
-                  </label>
-                  <label class="switch-toggle outer">
-                    <input aria-checked="true" checked aria-label="Paper Line Button" id="paper-line-toggle"
-                      type="checkbox" />
-                    <div></div>
-                  </label>
-                </div>
-                <div class="experimental">
-                  <!-- Removed option -->
-                  <div class="upload-paper-container">
-                    <label class="block" for="paper-file">Upload Paper Image as Background</label>
-                    <input accept=".jpg, .jpeg, .png" type="file" id="paper-file" />
+                <div class="category-grid">
+                  <div class="postfix-input" data-postfix="px">
+                    <label for="top-padding">Vertical Position</label>
+                    <input id="top-padding" min="0" value="5" type="number" />
+                  </div>
+                  <div class="postfix-input" data-postfix="px">
+                    <label for="word-spacing">Word Spacing</label>
+                    <input id="word-spacing" min="0" max="100" value="0" type="number" />
+                  </div>
+                  <div class="postfix-input" data-postfix="pt" style="display: none;">
+                    <label for="letter-spacing">Letter Spacing</label>
+                    <input id="letter-spacing" min="-5" max="40" value="0" type="number" />
                   </div>
                 </div>
-              </div>
-            </fieldset>
+              </fieldset>
 
-            <!--   -->
-            <fieldset>
-              <legend>Spacing Options</legend>
+              <!-- Pen ink color, Font size, Vertical position text, Word Spacing -->
+              <fieldset>
+                <legend>Page & Text Options</legend>
 
-              <div class="category-grid">
-                <div class="postfix-input" data-postfix="px">
-                  <label for="top-padding">Vertical Position</label>
-                  <input id="top-padding" min="0" value="5" type="number" />
+                <div class="category-grid">
+                  <div class="postfix-input" data-postfix="pt">
+                    <label for="font-size">Font Size</label>
+                    <input id="font-size" min="0" step="0.5" value="10" type="number" />
+                  </div>
+                  <div>
+                    <label class="block" for="ink-color">Ink Color</label>
+                    <select id="ink-color">
+                      <option default value="#000f55">Blue</option>
+                      <option value="black">Black</option>
+                      <option value="#ba3807">Red</option>
+                    </select>
+                  </div>
+                  <div style="display: none;">
+                    <label class="block" for="page-size">Page Size</label>
+                    <select id="page-size">
+                      <option default value="a4">A4 &nbsp;</option>
+                    </select>
+                  </div>
+                  <div style="display: none;">
+                    <label class="block" for="page-effects">Effects</label>
+                    <select id="page-effects">
+                      <option default value="no-effect">Shadows</option>
+                      <option value="no-effect">Scanner</option>
+                      <option value="no-effect">No Effect</option>
+                    </select>
+                  </div>
+                  <div style="display: none;">
+                    <label class="block" for="resolution">Resolution</label>
+                    <select id="resolution">
+                      <option value="0.8">Very Low</option>
+                      <option value="1">Low</option>
+                      <option value="2">Normal</option>
+                      <option selected value="3">High</option>
+                      <option value="4">Very High</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="postfix-input" data-postfix="px">
-                  <label for="word-spacing">Word Spacing</label>
-                  <input id="word-spacing" min="0" max="100" value="0" type="number" />
-                </div>
-                <div class="postfix-input" data-postfix="pt" style="display: none;">
-                  <label for="letter-spacing">Letter Spacing</label>
-                  <input id="letter-spacing" min="-5" max="40" value="0" type="number" />
-                </div>
-              </div>
-            </fieldset>
+              </fieldset>
 
-            <!-- Pen ink color, Font size, Vertical position text, Word Spacing -->
-            <fieldset>
-              <legend>Page & Text Options</legend>
+              <!-- Fonts -->
+              <fieldset>
+                <legend>Fonts</legend>
 
-              <div class="category-grid">
-                <div class="postfix-input" data-postfix="pt">
-                  <label for="font-size">Font Size</label>
-                  <input id="font-size" min="0" step="0.5" value="10" type="number" />
-                </div>
-                <div>
-                  <label class="block" for="ink-color">Ink Color</label>
-                  <select id="ink-color">
-                    <option default value="#000f55">Blue</option>
-                    <option value="black">Black</option>
-                    <option value="#ba3807">Red</option>
-                  </select>
-                </div>
-                <div style="display: none;">
-                  <label class="block" for="page-size">Page Size</label>
-                  <select id="page-size">
-                    <option default value="a4">A4 &nbsp;</option>
-                  </select>
-                </div>
-                <div style="display: none;">
-                  <label class="block" for="page-effects">Effects</label>
-                  <select id="page-effects">
-                    <option default value="no-effect">Shadows</option>
-                    <option value="no-effect">Scanner</option>
-                    <option value="no-effect">No Effect</option>
-                  </select>
-                </div>
-                <div style="display: none;">
-                  <label class="block" for="resolution">Resolution</label>
-                  <select id="resolution">
-                    <option value="0.8">Very Low</option>
-                    <option value="1">Low</option>
-                    <option value="2">Normal</option>
-                    <option selected value="3">High</option>
-                    <option value="4">Very High</option>
-                  </select>
-                </div>
-              </div>
-            </fieldset>
-
-            <!-- Fonts -->
-            <fieldset>
-              <legend>Fonts</legend>
-
-              <div class="category-grid">
-                <div>
-                  <label class="block" for="handwriting-font">Handwriting Font</label>
-                  <select id="handwriting-font">
-                    <option selected style="font-family: 'Homemade Apple';" value="'Homemade Apple', cursive">
-                      Sijan Font
-                    </option>
-                    <option value="Hindi_Font">Kruti-dev</option>
-                    <option style="font-family: 'Caveat', cursive; font-size: 13pt;" value="'Caveat', cursive">
-                      Caveat
-                    </option>
-                    <option style="
+                <div class="category-grid">
+                  <div>
+                    <label class="block" for="handwriting-font">Handwriting Font</label>
+                    <select id="handwriting-font">
+                      <option selected style="font-family: 'Homemade Apple';" value="'Homemade Apple', cursive">
+                        Sijan Font
+                      </option>
+                      <option value="Hindi_Font">Kruti-dev</option>
+                      <option style="font-family: 'Caveat', cursive; font-size: 13pt;" value="'Caveat', cursive">
+                        Caveat
+                      </option>
+                      <option style="
                           font-family: 'Liu Jian Mao Cao';
                           font-size: 13pt;
                         " value="'Liu Jian Mao Cao', cursive">
-                      Liu Jian Mao Cao
-                    </option>
-                  </select>
+                        Liu Jian Mao Cao
+                      </option>
+                    </select>
+                  </div>
+                  <div class="upload-handwriting-container">
+                    <label class="block" for="font-file">Upload your font
+                      <a style="font-size: 1.1rem;" title="How to add your own handwriting"
+                        href="#how-to-add-handwriting">
+                        &#9432;
+                      </a>
+                    </label>
+                    <input accept=".ttf, .otf" type="file" id="font-file" />
+                  </div>
                 </div>
-                <div class="upload-handwriting-container">
-                  <label class="block" for="font-file">Upload your font
-                    <a style="font-size: 1.1rem;" title="How to add your own handwriting"
-                      href="#how-to-add-handwriting">
-                      &#9432;
-                    </a>
-                  </label>
-                  <input accept=".ttf, .otf" type="file" id="font-file" />
-                </div>
-              </div>
-            </fieldset>
+              </fieldset>
 
-            <!-- GENERATE IMAGE BUTTONS -->
-            <hr style="
+              <!-- GENERATE IMAGE BUTTONS -->
+              <hr style="
                   border: 0.3px solid var(--elevation-background);
                   width: 80%;
                 " />
-            <div style="text-align: center; padding: 30px 0px;">
-              <button type="submit" data-testid="generate-image-button" class="button generate-image-button">
-                Make your Copy
-              </button>
+              <div style="text-align: center; padding: 30px 0px;">
+                <button type="submit" data-testid="generate-image-button" class="button generate-image-button">
+                  Make your Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <!-- OUTPUT -->
+      <section>
+        <h2 id="output-header">Here is Your Copy</h2>
+        <div id="output" class="output res-1" style="text-align: center;">
+          Click "Make Your Copy" Button to make your copy.
+        </div>
+        <div style="text-align: center; padding: 30px;">
+          <button class="imp-button" id="download-as-pdf-button">
+            Download All Images as PDF
+          </button>
+          <button class="delete-button" id="delete-all-button">
+            Clear all images
+          </button>
+        </div>
+        <div class="container1">
+          <h2>Frequently Asked Questions</h2>
+          <div class="accordion">
+            <div class="accordion-item">
+              <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Does this app
+                  do?</span><span class="icon" aria-hidden="true"></span></button>
+              <div class="accordion-content">
+                <p>This app converts typed text into realistic handwriting, allowing users to create handwritten notes,
+                  letters, and other documents with ease.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Can I customize the
+                  handwriting style?</span><span class="icon" aria-hidden="true"></span></button>
+              <div class="accordion-content">
+                <p>Yes, the app offers various handwriting styles, including different fonts, sizes, and ink colors, so
+                  you can personalize your documents to your liking.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Is the app available
+                  on both web and mobile?</span><span class="icon" aria-hidden="true"></span></button>
+              <div class="accordion-content">
+                <p>Yes, the app is accessible on both web browsers and mobile devices, providing a seamless experience
+                  across platforms.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">Can I download or
+                  share the handwritten text?</span><span class="icon" aria-hidden="true"></span></button>
+              <div class="accordion-content">
+                <p>Absolutely! You can download the handwritten text as an image or PDF, or share it directly through
+                  various platforms like email or messaging apps.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">Does the app support
+                  multiple languages?</span><span class="icon" aria-hidden="true"></span></button>
+              <div class="accordion-content">
+                <p>Yes, the app supports multiple languages, allowing you to convert text into handwriting in various
+                  scripts and alphabets.</p>
+              </div>
             </div>
           </div>
         </div>
-      </form>
+      </section>
+
+
+      </button>
+      <section id="how-to-add-handwriting">
+        <h2>✌️ Guide to add your own handwriting</h2>
+        <div class="mobile">
+          <ul>
+            <li>
+              To use your handwriting, you will have to generate font of your
+              handwriting.
+            </li>
+            <li>
+              There are websites like
+              <a target="_blank" rel="noopener noreferrer" href="https://www.calligraphr.com/en/">Calligraphr</a>
+              that let you do that.
+            </li>
+            <li>
+              Once you get .ttf file of your handwriting, upload it from 'Upload
+              your handwriting font' button in customizations sections
+            </li>
+          </ul>
+        </div>
+      </section>
+
+    </main>
+    <footer style="padding: 40px 0px 10px 0px;">
+      Thank you for using Text to Handwriting! You can follow me on Linkedin
+      <a href="https://www.linkedin.com/in/sijanthapa/"> @sijanthapa</a>
+      <br /><br /> If you're using it for writing assignments, make sure you use it at
+      your own risk and If it fails and your teacher finds this Software :D <br />
+      <br />byeeee! <br /><br />
+      ~ Sijan Lamichhane Magar <br />
+      <br />
+      <br />
+      <div class="footer-last">
+
+        <a href="https://drive.google.com/uc?export=download&id=1jIHZqn73R2UMNUs7IVXdje6Aia832eC2"
+          class="download-button">Download App </a>
+
+      </div>
+    </footer>
+
+    <!-- Fixed Elements -->
+    <section class="draw-container popup-container">
+      <button class="close-button">&times;</button>
+      <div class="display-flex responsive-flex">
+        <canvas id="diagram-canvas" style="background-color: #fff;" height="300px" width="600px"></canvas>
+        <div class="flex-1 buttons-container padding-around">
+          <button id="add-to-paper-button" style="margin-top: 5px; margin-bottom: 5px;">
+            Add to Paper
+          </button>
+          <button id="draw-download-button" style="margin-top: 5px; margin-bottom: 5px; ">
+            Download Image
+          </button>
+          <br /><br />
+          <input type="file" id="image-to-add-in-canvas" accept="image/x-png,image/jpeg" hidden="hidden" />
+          <br /><br /><button id="add-new-image-button">Add bg image</button>
+          <br /><br />
+          <button id="clear-draw-canvas" class="blue-button" style="background-color: #f30; color: #fff;">
+            Clear Canvas
+          </button>
+        </div>
+      </div>
     </section>
-
-    <!-- OUTPUT -->
-    <section>
-      <h2 id="output-header">Here is Your Copy</h2>
-      <div id="output" class="output res-1" style="text-align: center;">
-        Click "Make Your Copy" Button to make your copy.
-      </div>
-      <div style="text-align: center; padding: 30px;">
-        <button class="imp-button" id="download-as-pdf-button">
-          Download All Images as PDF
-        </button>
-        <button class="delete-button" id="delete-all-button">
-          Clear all images
-        </button>
-      </div>
-    </section>
-
-</button>
-    <section id="how-to-add-handwriting">
-      <h2>✌️ Guide to add your own handwriting</h2>
-      <div class="mobile">
-        <ul>
-          <li>
-            To use your handwriting, you will have to generate font of your
-            handwriting.
-          </li>
-          <li>
-            There are websites like
-            <a target="_blank" rel="noopener noreferrer" href="https://www.calligraphr.com/en/">Calligraphr</a>
-            that let you do that.
-          </li>
-          <li>
-            Once you get .ttf file of your handwriting, upload it from 'Upload
-            your handwriting font' button in customizations sections
-          </li>
-        </ul>
-      </div>
-    </section>
-
-  </main>
-  <footer style="padding: 40px 0px 10px 0px;">
-    Thank you for using Text to Handwriting! You can follow me on Linkedin 
-    <a href="https://www.linkedin.com/in/sijanthapa/"> @sijanthapa</a>
-    <br /><br /> If you're using it for writing assignments, make sure you use it at
-    your own risk and If it fails and your teacher finds this Software :D <br />
-    <br />byeeee! <br /><br />
-    ~ Sijan Lamichhane Magar <br/>
-    <br />
-    <br />
-    <div class="footer-last">
-      <a href="https://drive.google.com/uc?export=download&id=1jIHZqn73R2UMNUs7IVXdje6Aia832eC2" class="download-button">Download App </a>
-
-    </div>
-  </footer>
-
-  <!-- Fixed Elements -->
-  <section class="draw-container popup-container">
-    <button class="close-button">&times;</button>
-    <div class="display-flex responsive-flex">
-      <canvas id="diagram-canvas" style="background-color: #fff;" height="300px" width="600px"></canvas>
-      <div class="flex-1 buttons-container padding-around">
-        <button id="add-to-paper-button" style="margin-top: 5px; margin-bottom: 5px;">
-          Add to Paper
-        </button>
-        <button id="draw-download-button" style="margin-top: 5px; margin-bottom: 5px; ">
-          Download Image
-        </button>
-        <br /><br />
-        <input type="file" id="image-to-add-in-canvas" accept="image/x-png,image/jpeg" hidden="hidden" />
-        <br /><br /><button id="add-new-image-button">Add bg image</button>
-        <br /><br />
-        <button id="clear-draw-canvas" class="blue-button" style="background-color: #f30; color: #fff;">
-          Clear Canvas
-        </button>
-      </div>
-    </div>
-  </section>
-</div>
+  </div>
 
   <script src="./js/vendors/html2canvas.min.js" crossorigin="anonymous"></script>
   <script type="module" src="js/app.mjs"></script>
   <script defer src="https://unpkg.com/jspdf@^1/dist/jspdf.min.js"></script>
+  <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+  <script>
+    // Faq
+    const items = document.querySelectorAll(".accordion button");
+
+    function toggleAccordion() {
+      const itemToggle = this.getAttribute('aria-expanded');
+
+      for (i = 0; i < items.length; i++) {
+        items[i].setAttribute('aria-expanded', 'false');
+      }
+
+      if (itemToggle == 'false') {
+        this.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    items.forEach(item => item.addEventListener('click', toggleAccordion));
+  </script>
 </body>
 
 </html>
