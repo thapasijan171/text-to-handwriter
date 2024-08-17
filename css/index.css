@@ -1,5 +1,3 @@
-
-
 /* CSS Variables */
 html,
 body {
@@ -360,6 +358,7 @@ body.dark .github-corner {
   padding: 58px 0px;
   text-align: center;
 }
+
 .download-button {
   display: inline-block;
   padding: 10px 20px;
@@ -373,9 +372,10 @@ body.dark .github-corner {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
 .download-button:hover {
   background-color: #1558d6;
-  
+
 }
 
 .container1 {
@@ -388,9 +388,11 @@ body.dark .github-corner {
 .accordion .accordion-item {
   border-bottom: 1px solid #e5e5e5;
 }
+
 .accordion .accordion-item button[aria-expanded=true] {
   border-bottom: 1px solid #03b5d2;
 }
+
 .accordion button {
   position: relative;
   display: block;
@@ -404,18 +406,24 @@ body.dark .github-corner {
   background: transparent;
   outline: none;
 }
-.accordion button:hover, .accordion button:focus {
+
+.accordion button:hover,
+.accordion button:focus {
   cursor: pointer;
   color: #03b5d2;
 }
-.accordion button:hover::after, .accordion button:focus::after {
+
+.accordion button:hover::after,
+.accordion button:focus::after {
   cursor: pointer;
   color: #03b5d2;
   border: 1px solid #03b5d2;
 }
+
 .accordion button .accordion-title {
   padding: 1em 1.5em 1em 0;
 }
+
 .accordion button .icon {
   display: inline-block;
   position: absolute;
@@ -426,6 +434,7 @@ body.dark .github-corner {
   border: 1px solid;
   border-radius: 22px;
 }
+
 .accordion button .icon::before {
   display: block;
   position: absolute;
@@ -436,6 +445,7 @@ body.dark .github-corner {
   height: 2px;
   background: currentColor;
 }
+
 .accordion button .icon::after {
   display: block;
   position: absolute;
@@ -446,18 +456,22 @@ body.dark .github-corner {
   height: 10px;
   background: currentColor;
 }
+
 .accordion button[aria-expanded=true] {
   color: #03b5d2;
 }
+
 .accordion button[aria-expanded=true] .icon::after {
   width: 0;
 }
-.accordion button[aria-expanded=true] + .accordion-content {
+
+.accordion button[aria-expanded=true]+.accordion-content {
   opacity: 1;
   max-height: 9em;
   transition: all 200ms linear;
   will-change: opacity, max-height;
 }
+
 .accordion .accordion-content {
   opacity: 0;
   max-height: 0;
@@ -465,6 +479,7 @@ body.dark .github-corner {
   transition: opacity 200ms linear, max-height 200ms linear;
   will-change: opacity, max-height;
 }
+
 .accordion .accordion-content p {
   font-size: 1.2rem;
   font-weight: 300;
@@ -599,7 +614,7 @@ input[type='file']::before {
   transition: 0.3s ease;
 }
 
-.sijan{
+.sijan {
   background: rgb(237, 237, 237, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 20px;
@@ -620,14 +635,58 @@ input[type='file']::before {
     grid-auto-flow: row;
     grid-auto-rows: 1fr;
   }
+
   #output-header {
     padding-left: 15px;
   }
-  #how-to-add-handwriting h2{
+
+  #how-to-add-handwriting h2 {
     font-size: 18px;
   }
+
   .mobile {
     font-size: 14px;
+  }
+
+  .container1 {
+    padding: 2rem;
+    width: 100%;
+  }
+
+  .accordion button {
+    padding: 0.75em 0;
+    font-size: 1rem;
+  }
+
+  .accordion button .accordion-title {
+    padding: 0.75em 1em 0.75em 0;
+  }
+
+  .accordion button .icon {
+    top: 15px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .accordion button .icon::before {
+    top: 8px;
+    left: 4px;
+    width: 8px;
+  }
+
+  .accordion button .icon::after {
+    top: 4px;
+    left: 7px;
+    height: 8px;
+  }
+
+  .accordion button[aria-expanded=true]+.accordion-content {
+    max-height: 7em;
+  }
+
+  .accordion .accordion-content p {
+    font-size: 0.9rem;
+    margin: 1.5em 0;
   }
 
   footer {
